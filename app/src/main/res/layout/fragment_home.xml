@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".HomeFragment">
+
+    <ImageView
+        android:id="@+id/upperBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/upper_background"/>
+
+    <EditText
+        android:id="@+id/searchEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="-28dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/upperBackground"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:background="@drawable/back"
+        android:drawableStart="@drawable/search_ic"
+        android:drawablePadding="@dimen/_8sdp"
+        android:drawableTint="@color/unselected"
+        android:fontFamily="@font/raleway_medium"
+        android:hint="Search mosque here..."
+        android:inputType="text"
+        android:padding="@dimen/_14sdp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/unselected"
+        android:textSize="@dimen/_12sdp" />
+
+    <ImageView
+        android:id="@+id/bannerImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_below="@id/searchEt"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/fetchedEt"
+        android:layout_width="@dimen/_240sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bannerImage"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:fontFamily="@font/raleway_medium"
+        android:hint="@string/no_of_data_fetched"
+        android:padding="@dimen/_12sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp" />
+
+    <ImageView
+        android:id="@+id/filterBtn"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignTop="@+id/fetchedEt"
+        android:layout_alignBottom="@+id/fetchedEt"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_toEndOf="@id/fetchedEt"
+        android:padding="@dimen/_4sdp"
+        android:src="@drawable/filter_ic"
+        app:tint="@color/base" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/classesRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/filterBtn"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_mosque" />
+
+</RelativeLayout>

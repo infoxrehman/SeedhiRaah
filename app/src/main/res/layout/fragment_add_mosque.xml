@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:scrollbars="none"
+    tools:context=".AddMosqueFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/upperBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/upper_background"/>
+
+        <TextView
+            android:id="@+id/registerMosqueTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="-28dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/upperBackground"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:background="@drawable/back"
+            android:fontFamily="@font/raleway_bold"
+            android:text="@string/registerMosque"
+            android:padding="@dimen/_14sdp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp" />
+
+        <RelativeLayout
+            android:id="@+id/addImageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_below="@id/registerMosqueTv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:background="@drawable/unselected_edittext_background"
+            android:padding="@dimen/_2sdp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/addImageSrc"
+                app:shapeAppearance="@style/styleRoundCornersImage"
+                android:layout_width="@dimen/_114sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_alignParentStart="true"
+                android:layout_margin="@dimen/_4sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_src" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addImageBtn"
+                app:backgroundTint="@null"
+                app:icon="@drawable/add_ic"
+                app:iconPadding="@dimen/_4sdp"
+                app:iconSize="@dimen/_14sdp"
+                app:iconTint="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_toEndOf="@+id/addImageSrc"
+                android:background="@drawable/primary_btn"
+                android:padding="@dimen/_6sdp"
+                android:stateListAnimator="@null"
+                android:text="@string/chooseImage"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addImageBtn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_toEndOf="@+id/addImageSrc"
+                android:drawablePadding="@dimen/_12sdp"
+                android:fontFamily="@font/raleway_medium"
+                android:padding="@dimen/_10sdp"
+                android:text="Please select an image to upload"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textColorHint="#70747E"
+                android:textSize="@dimen/_12ssp" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/mosqueNameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addImageLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:background="@drawable/unselected_edittext_background"
+            android:drawableStart="@drawable/mosque_ic"
+            android:drawablePadding="@dimen/_12sdp"
+            android:drawableTint="#70747E"
+            android:fontFamily="@font/raleway_medium"
+            android:hint="@string/mosqueName"
+            android:inputType="text"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textColorHint="#70747E"
+            android:textSize="@dimen/_12sdp" />
+
+        <EditText
+            android:id="@+id/ownerNameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mosqueNameEt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:background="@drawable/unselected_edittext_background"
+            android:drawableStart="@drawable/user_ic"
+            android:drawablePadding="@dimen/_12sdp"
+            android:drawableTint="#70747E"
+            android:fontFamily="@font/raleway_medium"
+            android:hint="@string/aalimSahabName"
+            android:inputType="text"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textColorHint="#70747E"
+            android:textSize="@dimen/_12sdp" />
+
+        <EditText
+            android:id="@+id/cityNameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ownerNameEt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:background="@drawable/unselected_edittext_background"
+            android:drawableStart="@drawable/location_ic"
+            android:drawablePadding="@dimen/_12sdp"
+            android:drawableTint="#70747E"
+            android:fontFamily="@font/raleway_medium"
+            android:hint="@string/cityName"
+            android:inputType="text"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textColorHint="#70747E"
+            android:textSize="@dimen/_12sdp" />
+
+        <EditText
+            android:id="@+id/capacityEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cityNameEt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:background="@drawable/unselected_edittext_background"
+            android:drawableStart="@drawable/user_ic"
+            android:drawablePadding="@dimen/_12sdp"
+            android:drawableTint="#70747E"
+            android:fontFamily="@font/raleway_medium"
+            android:hint="@string/capacity"
+            android:inputType="number"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textColorHint="#70747E"
+            android:textSize="@dimen/_12sdp" />
+
+        <EditText
+            android:id="@+id/mosqueDescriptionEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/capacityEt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:background="@drawable/unselected_edittext_background"
+            android:fontFamily="@font/raleway_medium"
+            android:gravity="start|top"
+            android:hint="@string/mosqueDescription"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textColorHint="#70747E"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/isWomenAvailableTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mosqueDescriptionEt"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:fontFamily="@font/raleway_medium"
+            android:padding="@dimen/_10sdp"
+            android:text="Facilities for ladies"
+            android:textColor="#70747E"
+            android:textSize="@dimen/_12sdp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/isWomenAvailable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mosqueDescriptionEt"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:trackTint="#979797"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:layout_toEndOf="@id/isWomenAvailableTv"
+            android:padding="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/emailTv"
+            app:drawableStartCompat="@drawable/email_ic"
+            app:drawableTint="#70747E"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/isWomenAvailableTv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:drawablePadding="@dimen/_12sdp"
+            android:fontFamily="@font/raleway_medium"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textColorHint="#70747E"
+            android:textSize="@dimen/_12sdp" />
+
+        <EditText
+            android:id="@+id/cPasswordEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emailTv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:background="@drawable/unselected_edittext_background"
+            android:drawableStart="@drawable/password_ic"
+            android:drawablePadding="@dimen/_12sdp"
+            android:drawableTint="#70747E"
+            android:fontFamily="@font/raleway_medium"
+            android:hint="@string/confirmPassword"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textColorHint="#70747E"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/locationEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cPasswordEt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:drawableStart="@drawable/location_ic"
+            android:drawablePadding="@dimen/_12sdp"
+            android:drawableTint="#70747E"
+            android:fontFamily="@font/raleway_medium"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/mosqueLocation"
+            android:textColor="#70747E"
+            android:textSize="@dimen/_12sdp" />
+
+        <Button
+            android:id="@+id/uploadBtn"
+            app:backgroundTint="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/locationEt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_48sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_48sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/primary_btn"
+            android:fontFamily="@font/raleway_bold"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:stateListAnimator="@null"
+            android:text="@string/uploadDetail"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp" />
+
+    </RelativeLayout>
+
+</ScrollView>

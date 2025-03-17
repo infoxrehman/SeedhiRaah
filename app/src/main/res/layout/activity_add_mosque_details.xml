@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".AddMosqueDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/background"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/mosqueSrc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:src="@drawable/mosque_illustration" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_below="@id/mosqueSrc"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/raleway_bold"
+                android:text="@string/addMosqueDetails"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_22ssp" />
+
+            <TextView
+                android:id="@+id/mosqueName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/text"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/raleway_bold"
+                android:text="@string/mosqueName"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp" />
+
+            <RelativeLayout
+                android:id="@+id/detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mosqueName"
+                android:backgroundTint="#BC93D1"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/back_detail"
+                android:layout_marginTop="@dimen/_18sdp">
+
+                <TextView
+                    android:id="@+id/prayerTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:fontFamily="@font/raleway_bold"
+                    android:text="@string/prayer"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16ssp" />
+
+                <TextView
+                    android:id="@+id/adhanTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_toStartOf="@+id/iqamaTv"
+                    android:layout_toEndOf="@+id/prayerTv"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/raleway_bold"
+                    android:gravity="center"
+                    android:text="@string/adhan"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16ssp" />
+
+                <TextView
+                    android:id="@+id/iqamaTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/raleway_bold"
+                    android:text="@string/iqama"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16ssp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/timings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_below="@id/detail"
+                android:layout_marginTop="@dimen/_2sdp" >
+
+                <RelativeLayout
+                    android:id="@+id/n01"
+                    android:layout_width="match_parent"
+                    android:background="#FFF0F8"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/namaz01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:fontFamily="@font/raleway_medium"
+                        android:text="Fajr"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <TextView
+                        android:id="@+id/fajr_hour01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/unselected_edittext_background"
+                        android:padding="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:text="@string/hours"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <TextView
+                        android:id="@+id/fajr_hour02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/unselected_edittext_background"
+                        android:padding="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:text="@string/hours"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/n02"
+                    android:layout_width="match_parent"
+                    android:background="#FCFAFE"
+                    android:layout_below="@id/n01"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/namaz02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:fontFamily="@font/raleway_medium"
+                        android:text="Dhuhr"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <TextView
+                        android:id="@+id/dhuhr_hour01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/unselected_edittext_background"
+                        android:padding="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:text="@string/hours"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <TextView
+                        android:id="@+id/dhuhr_hour02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/unselected_edittext_background"
+                        android:padding="@dimen/_8sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:text="@string/hours"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/n03"
+                    android:layout_width="match_parent"
+                    android:background="#FFF0F8"
+                    android:layout_below="@id/n02"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/namaz03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:text="Asr"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <TextView
+                        android:id="@+id/asr_hour01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/unselected_edittext_background"
+                        android:padding="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:text="@string/hours"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <TextView
+                        android:id="@+id/asr_hour02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@drawable/unselected_edittext_background"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/hours"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/n04"
+                    android:layout_width="match_parent"
+                    android:background="#FCFAFE"
+                    android:layout_below="@id/n03"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/namaz04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:fontFamily="@font/raleway_medium"
+                        android:text="Magrib"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <TextView
+                        android:id="@+id/magrib_hour01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/unselected_edittext_background"
+                        android:padding="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:text="@string/hours"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <TextView
+                        android:id="@+id/magrib_hour02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/unselected_edittext_background"
+                        android:padding="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:text="@string/hours"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/n05"
+                    android:layout_width="match_parent"
+                    android:background="#FFF0F8"
+                    android:layout_below="@id/n04"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/namaz05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:fontFamily="@font/raleway_medium"
+                        android:text="Isha"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <TextView
+                        android:id="@+id/isha_hour01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:background="@drawable/unselected_edittext_background"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/hours"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <TextView
+                        android:id="@+id/isha_hour02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/unselected_edittext_background"
+                        android:padding="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:text="@string/hours"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/jum"
+                    android:layout_width="match_parent"
+                    android:background="#FCFAFE"
+                    android:layout_below="@id/n05"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/jummah"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:fontFamily="@font/raleway_medium"
+                        android:text="Jum'ah"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <TextView
+                        android:id="@+id/jummah_hour01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:background="@drawable/unselected_edittext_background"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/hours"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <TextView
+                        android:id="@+id/jummah_hour02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/unselected_edittext_background"
+                        android:padding="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:text="@string/hours"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tar"
+                    android:layout_width="match_parent"
+                    android:background="#FFF0F8"
+                    android:layout_below="@id/jum"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/taraweeh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:fontFamily="@font/raleway_medium"
+                        android:text="Taraweeh"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <TextView
+                        android:id="@+id/taraweeh_hour01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:background="@drawable/unselected_edittext_background"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/hours"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <TextView
+                        android:id="@+id/taraweeh_hour02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/unselected_edittext_background"
+                        android:padding="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:text="@string/hours"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fitr"
+                    android:layout_width="match_parent"
+                    android:background="#FCFAFE"
+                    android:layout_below="@id/tar"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/eidFitr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:fontFamily="@font/raleway_medium"
+                        android:text="Eid-ul-Fitr"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <TextView
+                        android:id="@+id/eid_fitr_hour01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:background="@drawable/unselected_edittext_background"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/hours"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <TextView
+                        android:id="@+id/eid_fitr_hour02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/unselected_edittext_background"
+                        android:padding="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:text="@string/hours"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/adha"
+                    android:layout_width="match_parent"
+                    android:background="#FFF0F8"
+                    android:layout_below="@id/fitr"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/eidAdha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:fontFamily="@font/raleway_medium"
+                        android:text="Eid-ul-Adha"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <TextView
+                        android:id="@+id/eid_adha_hour01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:background="@drawable/unselected_edittext_background"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/hours"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <TextView
+                        android:id="@+id/eid_adha_hour02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/unselected_edittext_background"
+                        android:padding="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:text="@string/hours"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/uploadBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timings"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_50sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/primary_btn"
+                android:fontFamily="@font/raleway_bold"
+                android:gravity="center"
+                android:padding="@dimen/_8sdp"
+                android:stateListAnimator="@null"
+                android:text="@string/uploadDetail"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                app:backgroundTint="@null" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

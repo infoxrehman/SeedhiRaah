@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_2sdp"
+    android:layout_marginEnd="@dimen/_2sdp"
+    android:layout_marginTop="@dimen/_2sdp"
+    android:layout_marginBottom="@dimen/_8sdp"
+    android:background="@drawable/back">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/mosqueImage"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        app:shapeAppearance="@style/styleRoundCornersImage"
+        android:src="@drawable/default_mosque" />
+
+    <TextView
+        android:id="@+id/mosqueName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_toStartOf="@+id/goBtn"
+        android:layout_toEndOf="@id/mosqueImage"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/mosqueName"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp" />
+
+    <TextView
+        android:id="@+id/cityName"
+        android:layout_width="match_parent"
+        android:layout_below="@id/mosqueName"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_toStartOf="@+id/goBtn"
+        android:layout_toEndOf="@id/mosqueImage"
+        android:fontFamily="@font/raleway_medium"
+        android:text="@string/cityName"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp" />
+
+    <TextView
+        android:id="@+id/currentNamaz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cityName"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:layout_toStartOf="@+id/goBtn"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_toEndOf="@id/mosqueImage"
+        android:text="Current Namaz"
+        android:textColor="#5C6D78"
+        android:textSize="@dimen/_10ssp" />
+
+    <ImageView
+        android:id="@+id/goBtn"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="@dimen/_48sdp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/_42sdp"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:src="@drawable/go_btn"
+        app:backgroundTint="@color/white" />
+
+    <ImageButton
+        android:id="@+id/menuBtn"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:background="@color/transparent"
+        android:src="@drawable/menu_ic"  />
+
+</RelativeLayout>

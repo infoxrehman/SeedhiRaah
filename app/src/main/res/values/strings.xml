@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Seedhi Raah</string>
+
+    <string name="hours">00:00</string>
+    <string name="mosqueName">Mosque name</string>
+    <string name="mosqueLocation">Mosque location</string>
+    <string name="mosqueDescription">Mosque description (Optional)</string>
+    <string name="prayer">Prayer</string>
+    <string name="adhan">Adhan</string>
+    <string name="iqama">Iqama</string>
+    <string name="registerMosque">Register a mosque</string>
+    <string name="editMosque">Edit your mosque</string>
+    <string name="addMosqueDetails">Add mosque details</string>
+    <string name="aalimSahabName">Aalim sahab name (Optional)</string>
+    <string name="cityName">City Name</string>
+    <string name="capacity">Capacity (Optional)</string>
+    <string name="ladiesFacilityAvailable">isLadiesFacilityAvailable</string>
+    <string name="confirmPassword">Confirm your password</string>
+
+    <string name="registerTitle">Hello!</string>
+    <string name="registerDescription">Register to get started</string>
+    <string name="loginTitle">Welcome back!</string>
+    <string name="loginDescription">Glad to see you, Again!</string>
+
+    <string name="enterName">Enter your name</string>
+    <string name="enterEmail">Enter your email address</string>
+    <string name="enterPassword">Enter your password</string>
+    <string name="signIn">Already have an account? <b> Sign in</b></string>
+    <string name="signUp">Din\'t have a account? <b> Sign up</b></string>
+    <string name="getBack">Don\'t need! Get back? <b> Sign in</b></string>
+
+    <string name="uploadDetail">Upload details</string>
+    <string name="updateDetail">Update details</string>
+
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="password">Reset Password</string>
+    <string name="forgetPassword">Forget password?</string>
+    <string name="forgottenPassword">Forgotten your password?</string>
+
+    <string name="directions">Directions</string>
+
+    <string name="chooseImage">Choose image</string>
+    <string name="changeAddress">Change address</string>
+    <string name="home">Home</string>
+    <string name="add_mosque">Add</string>
+    <string name="profile">Profile</string>
+    <string name="my_profile">My Profile</string>
+    <string name="no_of_data_fetched">No of data fetched…</string>
+
+    <string-array name="diameters">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+        <item>100</item>
+
+    </string-array>
+
+</resources>
